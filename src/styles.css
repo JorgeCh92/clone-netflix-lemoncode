@@ -1,0 +1,148 @@
+body {
+    background-color: #141414;
+    color: white;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    width: 99vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 3%;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    
+}
+
+.header-logo div {
+    width: 100%;
+    padding: 0% 5%;
+}
+
+.header-buttons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    
+}
+
+.header-buttons div {
+    padding: 0% 3%;
+}
+
+.header-buttons div:hover {
+    background-color: white;
+    color: darkblue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+}
+
+main section {
+    display: flex;
+}
+
+section div img{
+    width: 90%;
+    height: 90%;
+    min-width: 225px;
+}
+
+section div img:hover {
+    width: 91%;
+    height: 100%;
+}
+
+.top {
+    flex-direction: row-reverse;
+}
+
+#top-text::after {
+    content: "5";
+}
+
+/* CSS para tablet */
+@media screen and (min-width: 420px) and (max-width: 1280px) {
+    .platform-title {
+      display: none;
+    }
+  
+    .section-title {
+      font-size: 2em;
+    }
+  
+    #top-text::after {
+      content: "3";
+    }
+  
+    section {
+      justify-content: space-between;
+    }
+    section div {
+      flex-grow: 1;
+      width: 33%;
+    }
+  
+    .top {
+      width: 100%;
+    }
+    .top div:nth-child(-n+2) {
+      display: none;
+    }
+  
+    .first, .second {
+      flex-wrap: wrap;
+    }
+  }
+
+  /* CSS para móvil */
+  @media screen and (max-width: 420px) {
+    .platform-title {
+      display: none;
+    }
+  
+    .section-title {
+      font-size: 2em;
+    }
+  
+    #top-text::after {
+      content: "3";
+    }
+  
+    section {
+      justify-content: space-between;
+    }
+    section div {
+      flex-grow: 1;
+      width: 100%;
+    }
+  
+    .top {
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+    .top div:nth-child(-n+2) {
+      display: none;
+    }
+  
+    .first, .second {
+      flex-wrap: wrap;
+    }
+  }
